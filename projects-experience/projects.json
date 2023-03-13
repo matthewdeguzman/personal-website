@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "title": "Technical Research Project",
+      "description": "Worked with Dr. Amanpreet Kapoor at the University of Florida (UF) to create Open Education Resources (OER) that will be added to the Data Structures and Algorithms course at UF and distributed globally. I created technical interview questions and recorded content to guide others to a solution and how to solve such problems during the interview process.",
+      "startTime": "January 2023",
+      "endTime": "May 2023",
+      "github": "https://github.com/COP3530/Programming-Problems"
+    },
+    {
+      "title": "Content Generator",
+      "description": "Created a program that generates entertaining video content to be uploaded on video sharing platforms. The program leverages the Reddit API, the Google Text to Speech service, Mutagen, and Moviepy by retrieving posts from reddit, loading subtitles, altering the audio, and rendering the video into several parts.",
+      "startTime": "September 2022",
+      "endTime": "February 2023",
+      "github": "https://github.com/matthewdeguzman/tiktok-content-generator"
+    },
+    {
+      "title": "Tic-Tac-Toe AI",
+      "description": "Created an unbeatable tic-tac-toe bot and learned about AI by implementing the minimax algorithm",
+      "startTime": "December 2021",
+      "endTime": "January 2022",
+      "github": "https://github.com/matthewdeguzman/Tic-Tac-Toe-AI"
+    },
+    {
+      "title": "Maze Generator and Path Finder",
+      "description": "Creates random mazes of variable length using a depth-first search and compares Dijkstra's algorithm and breadth-first search in terms of time for finding the shortest path between two points in the maze",
+      "startTime": "August 2021",
+      "endTime": "August 2021",
+      "github": "https://github.com/matthewdeguzman/Maze-Generator-and-Path-Finder"
+    },
+    {
+      "title": "Moodify",
+      "description": "Recommends users songs based on their current mood via the Spotify API and a heuristic algorithm which outputs how closely a song matches a user's mood.",
+      "startTime": "October 2022",
+      "endTime": "December 2022",
+      "github": "https://github.com/matthewdeguzman/moodify"
+    },
+    {
+      "title": "Java Mastermind",
+      "description": "Created a version of the Mastermind boardgame in Java",
+      "startTime": "November 2020",
+      "endTime": "December 2020",
+      "github": "https://github.com/matthewdeguzman/Mastermind"
+    },
+    {
+      "title": "Car Salesperson Simulator",
+      "description": "Worked with Java Swing to create a UI for user's to buy cars.",
+      "startTime": "March 2021",
+      "endTime": "April 2021",
+      "github": "https://github.com/matthewdeguzman/Car-Salesperson"
+    },
+    {
+      "title": "Minesweeper",
+      "description": "Worked with the SFML library and C++ to make a working version of minesweeper.",
+      "startTime": "November 2021",
+      "endTime": "December 2021",
+      "github": "https://github.com/matthewdeguzman/Minesweeper"
+    }
+  ]
+}
