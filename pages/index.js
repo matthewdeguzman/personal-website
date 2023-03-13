@@ -18,7 +18,7 @@ export default function Home() {
         </p>
       </div>
       <div className="flex justify-center border-2 border-black">
-        <div className="flex-initial w-100">
+        <div className="flex-initial basis-1/3 text-center">
           <p>
             I am a second-year student at the University of Florida majoring 
             in Computer Science and Minoring in Mathematics. I am a software engineer
