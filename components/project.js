@@ -17,10 +17,7 @@ export default function Project({
         <div className="mt-6 gap-y-10 gap-x-6">
           <div className="mt-4">
             <div>
-              <h3 className="text-sm text-gray-700">
-                <span aria-hidden="true" className="absolute inset-0" />
-                {description}
-              </h3>
+              <h3 className="text-sm text-gray-700">{description}</h3>
               <Link href={github} className="mt-1 text-sm text-gray-500">
                 github
               </Link>

@@ -48,9 +48,8 @@ export default function Home({ allProjectsData }) {
         <div className="flex flex-wrap justify-evenly">
           {allProjectsData.map(
             ({ title, description, startTime, endTime, github }) => (
-              <div className="border-2 border-black flex-none w-64">
+              <div className="flex-none w-64" key={github}>
                 <Project
-                  key={github}
                   title={title}
                   description={description}
                   startTime={startTime}
