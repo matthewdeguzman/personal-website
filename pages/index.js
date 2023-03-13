@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Personal Website</title>
         <meta name="description" content="Matthew DeGuzman's personal website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div> Personal Website </div>
+      <h1 className="text-3xl font-bold underline"> Personal Website!</h1>
     </>
   )
 }
