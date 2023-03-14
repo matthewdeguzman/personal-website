@@ -25,30 +25,28 @@ export default function Home({ allProjectsData }) {
 
       {/* Introduction Section */}
       <div>
-        <p className="text-5xl font-sans font-bold">
+        <p className="text-5xl pl-2 md:text-7xl font-sans font-extrabold tracking-tight text-gray-900">
           Hello. <br />
           My name is Matthew DeGuzman.
         </p>
       </div>
 
       {/* About me section */}
-      <div className="flex justify-center border-2 border-black">
-        <div className="flex-initial basis-1/3 text-center">
-          <p>
-            I am a second-year student at the University of Florida majoring in
-            Computer Science and Minoring in Mathematics. I am a software
-            engineer and have industry experience through two internships at
-            Microsoft.
-          </p>
-        </div>
+      <div className="bg-black w-screen">
+        <p className="mx-auto text-center text-gray-100 text-lg py-8 mt-2 w-fit sm:mt-4 sm:max-w-screen-sm">
+          I am a software developer and currently attend the University of
+          Florida where I am pursuing a BS in Computer Science and minoring in
+          Mathematics. I have industry experience through two internships at
+          Microsoft and continue to learn new technologies outside of school.
+        </p>
       </div>
 
       {/* Project Section */}
       <div>
-        <h1 className="text-7xl font-bold tracking-tight text-gray-900 text-center">
+        <h1 className="text-6xl mt-8 font-bold tracking-tight text-gray-900 text-center">
           Projects
         </h1>
-        <div className="grid mt-4 grid-rows-8 gap-16 md:gap-24 justify-center">
+        <div className="grid grid-rows-8 gap-16 mt-4 md:gap-24 md:mt-16 justify-center">
           {allProjectsData.map(
             ({ title, description, startTime, endTime, github }) => (
               <div key={github}>
