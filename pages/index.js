@@ -46,7 +46,7 @@ export default function Home({ allProjectsData }) {
       </div>
 
       {/* Project Section */}
-      <div className="sm:scroll-mt-12" id="Projects">
+      <div className="scroll-mt-16 sm:scroll-mt-24" id="Projects">
         <h1 className={homeStyles.headerMargin}>Projects</h1>
         <div className="grid grid-rows-8 gap-16 mt-4 md:gap-24 md:mt-16 justify-center">
           {allProjectsData.map(
@@ -67,7 +67,7 @@ export default function Home({ allProjectsData }) {
         </div>
       </div>
       {/* Contact form*/}
-      <div className="sm:scroll-mt-12" id="Contact">
+      <div className="scroll-mt-4 sm:scroll-mt-12" id="Contact">
         <h1 className={homeStyles.headerMargin}>Contact me</h1>
       </div>
       <Contact />

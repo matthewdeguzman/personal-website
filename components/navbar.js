@@ -2,11 +2,11 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "About", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
-  { name: "Resume", href: "#", current: false },
+  { name: "Home", href: "#Home", current: true },
+  { name: "About", href: "#About", current: false },
+  { name: "Projects", href: "#Projects", current: false },
+  { name: "Contact", href: "#Contact", current: false },
+  { name: "Resume", href: "#Resume", current: false },
 ];
 
 function classNames(...classes) {
@@ -17,7 +17,6 @@ function scrollClick(sectionName) {
   const element = document.getElementById(sectionName);
   if (element) {
     element.scrollIntoView({ behavior: "smooth" });
-    console.log(sectionName);
   }
 }
 
@@ -84,20 +83,14 @@ export default function Navbar() {
                 <Disclosure.Button
                   key={item.name}
                   as="a"
-                  href={"#" + item.name}
                   className={classNames(
                     buttonState(item),
                     "block w-full rounded-md px-3 py-2 text-left font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
+                  href={item.href}
                 >
-                  <button
-                    onClick={() => {
-                      scrollClick(item.name);
-                    }}
-                  >
-                    {item.name}
-                  </button>
+                  {item.name}
                 </Disclosure.Button>
               ))}
             </div>
