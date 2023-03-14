@@ -10,9 +10,9 @@ export default function Project({
 }) {
   const titl = getTitle(title, left);
   const desc = gitDescription(description, github, left);
-  const order = left ? "" : "md:-order-1";
+  const order = left ? "" : "md:-order-1"; // order of the description in the grid depends on if the title is on left
   return (
-    <div className="mx-auto w-fit md:max-w-4xl py-8 px-4 sm:py-4 sm:px-6 lg:px-8">
+    <div className="mx-auto w-fit md:max-w-4xl mt-4 px-4 md:mt-8 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2">
         {titl}
         <div className={order}>{desc}</div>
