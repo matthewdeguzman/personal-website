@@ -11,6 +11,7 @@ export function getStaticProps() {
   };
 }
 export default function Home({ allProjectsData }) {
+  let left = true;
   return (
     <>
       <Head>
@@ -44,22 +45,23 @@ export default function Home({ allProjectsData }) {
 
       {/* Project Section */}
       <div>
-        <h1 className="text-4xl px-4 font-bold tracking-tight text-gray-900">
+        <h1 className="text-7xl font-bold tracking-tight text-gray-900 text-center">
           Projects
         </h1>
-        <div className="grid grid-cols-2 justify-center">
-          {/* <div className="flex items-stretch flex-wrap justify-evenly"> */}
+        <div className="grid mt-4 grid-rows-8 gap-16 md:gap-24 justify-center">
           {allProjectsData.map(
             ({ title, description, startTime, endTime, github }) => (
-              <Project
-                // className="flex-none"
-                key={github}
-                title={title}
-                description={description}
-                startTime={startTime}
-                endTime={endTime}
-                github={github}
-              />
+              <div key={github}>
+                <Project
+                  title={title}
+                  description={description}
+                  startTime={startTime}
+                  endTime={endTime}
+                  github={github}
+                  left={left}
+                />
+                {(left = !left)}
+              </div>
             )
           )}
         </div>
