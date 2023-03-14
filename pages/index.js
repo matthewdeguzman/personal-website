@@ -44,19 +44,22 @@ export default function Home({ allProjectsData }) {
 
       {/* Project Section */}
       <div>
-        <h1 className="font-medium text-2xl">Projects</h1>
-        <div className="flex flex-wrap justify-evenly">
+        <h1 className="text-4xl px-4 font-bold tracking-tight text-gray-900">
+          Projects
+        </h1>
+        <div className="grid grid-cols-2 justify-center">
+          {/* <div className="flex items-stretch flex-wrap justify-evenly"> */}
           {allProjectsData.map(
             ({ title, description, startTime, endTime, github }) => (
-              <div className="flex-none w-64" key={github}>
-                <Project
-                  title={title}
-                  description={description}
-                  startTime={startTime}
-                  endTime={endTime}
-                  github={github}
-                />
-              </div>
+              <Project
+                // className="flex-none"
+                key={github}
+                title={title}
+                description={description}
+                startTime={startTime}
+                endTime={endTime}
+                github={github}
+              />
             )
           )}
         </div>
