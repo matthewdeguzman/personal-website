@@ -2,36 +2,48 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "About", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
-  { name: "Resume", href: "#", current: false },
+  { name: "Home", href: "#Home", current: true },
+  { name: "About", href: "#About", current: false },
+  { name: "Projects", href: "#Projects", current: false },
+  { name: "Contact", href: "#Contact", current: false },
+  { name: "Resume", href: "#Resume", current: false },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+function scrollClick(sectionName) {
+  const element = document.getElementById(sectionName);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+function buttonState(item) {
+  return item.current
+    ? "bg-gray-900 text-white"
+    : "text-black hover:bg-gray-900 hover:text-white";
+}
 function button(item) {
   return (
-    <a
+    <button
       key={item.name}
-      href={item.href}
+      onClick={() => {
+        scrollClick(item.name);
+      }}
       className={classNames(
-        item.current
-          ? "bg-gray-900 text-white"
-          : "text-black hover:bg-gray-900 hover:text-white",
+        buttonState(item),
         "rounded-md px-3 py-2 text-sm font-medium"
       )}
       aria-current={item.current ? "page" : undefined}
     >
       {item.name}
-    </a>
+    </button>
   );
 }
 
-export default function Example() {
+export default function Navbar() {
   return (
     <Disclosure
       as="nav"
@@ -71,14 +83,12 @@ export default function Example() {
                 <Disclosure.Button
                   key={item.name}
                   as="a"
-                  href={item.href}
                   className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-500 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
+                    buttonState(item),
+                    "block w-full rounded-md px-3 py-2 text-left font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
+                  href={item.href}
                 >
                   {item.name}
                 </Disclosure.Button>
