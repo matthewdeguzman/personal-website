@@ -13,16 +13,37 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+function button(item) {
+  return (
+    <a
+      key={item.name}
+      href={item.href}
+      className={classNames(
+        item.current
+          ? "bg-gray-900 text-white"
+          : "text-black hover:bg-gray-900 hover:text-white",
+        "rounded-md px-3 py-2 text-sm font-medium"
+      )}
+      aria-current={item.current ? "page" : undefined}
+    >
+      {item.name}
+    </a>
+  );
+}
+
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-white">
+    <Disclosure
+      as="nav"
+      className="bg-white fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen"
+    >
       {({ open }) => (
         <>
-          <div className="mx-auto sm:mt-2">
-            <div className="relative h-16 items-center justify-between">
+          <div>
+            <div className="relative justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 mt-8 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -32,45 +53,19 @@ export default function Example() {
                 </Disclosure.Button>
               </div>
 
-              <div className="grid grid-cols-2 sm:items-stretch sm:justify-between">
+              <div className="grid grid-cols-2 sm:items-center sm:justify-between">
                 <div className="hidden sm:ml-2 sm:block">
-                  <a
-                    key={navigation[0].name}
-                    href={navigation[0].href}
-                    className={classNames(
-                      navigation[0].current
-                        ? "bg-black text-white"
-                        : "text-black hover:bg-black hover:text-white",
-                      "rounded-md px-3 py-2 text-sm font-medium"
-                    )}
-                    aria-current={navigation[0].current ? "page" : undefined}
-                  >
-                    {navigation[0].name}
-                  </a>
+                  {button(navigation[0])}
                 </div>
 
                 <div className="hidden justify-self-end sm:mr-2 sm:block">
-                  {navigation.slice(1).map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-black text-white"
-                          : "text-black hover:bg-black hover:text-white",
-                        "rounded-md px-3 py-2 text-sm font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </a>
-                  ))}
+                  {navigation.slice(1).map((item) => button(item))}
                 </div>
               </div>
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="sm:hidden mt-8">
             <div className="space-y-1 px-2 pt-2 pb-3">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -80,7 +75,7 @@ export default function Example() {
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      : "text-gray-500 hover:bg-gray-700 hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Navbar from "../components/navbar";
 import Project from "../components/project";
 import Contact from "../components/contact";
 import { getSortedProjectsData } from "../lib/projects";
@@ -25,8 +26,9 @@ export default function Home({ allProjectsData }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+      <Navbar />
       {/* Introduction Section */}
-      <div>
+      <div className="mt-8 sm:mt-16">
         <p className="text-5xl pl-2 md:text-7xl font-sans font-extrabold tracking-tight text-gray-900">
           Hello. <br />
           My name is Matthew DeGuzman.
