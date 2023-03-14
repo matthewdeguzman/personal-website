@@ -6,6 +6,7 @@ const navigation = [
   { name: "About", href: "#", current: false },
   { name: "Projects", href: "#", current: false },
   { name: "Contact", href: "#", current: false },
+  { name: "Resume", href: "#", current: false },
 ];
 
 function classNames(...classes) {
@@ -17,8 +18,8 @@ export default function Example() {
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl">
-            <div className="relative flex h-16 items-center justify-between">
+          <div className="mx-auto sm:mt-2">
+            <div className="relative h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -30,7 +31,8 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+              <div className="grid grid-cols-2 sm:items-stretch sm:justify-between">
                 <div className="hidden sm:ml-2 sm:block">
                   <a
                     key={navigation[0].name}
@@ -45,6 +47,9 @@ export default function Example() {
                   >
                     {navigation[0].name}
                   </a>
+                </div>
+
+                <div className="hidden justify-self-end sm:mr-2 sm:block">
                   {navigation.slice(1).map((item) => (
                     <a
                       key={item.name}
