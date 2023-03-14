@@ -20,8 +20,8 @@ function button(item) {
       href={item.href}
       className={classNames(
         item.current
-          ? "bg-white text-black"
-          : "text-white hover:bg-white hover:text-black",
+          ? "bg-gray-900 text-white"
+          : "text-black hover:bg-gray-900 hover:text-white",
         "rounded-md px-3 py-2 text-sm font-medium"
       )}
       aria-current={item.current ? "page" : undefined}
@@ -34,7 +34,7 @@ export default function Example() {
   return (
     <Disclosure
       as="nav"
-      className="bg-gray-900 fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen"
+      className="bg-white fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen"
     >
       {({ open }) => (
         <>
