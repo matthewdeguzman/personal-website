@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Project from "../components/project";
+import Contact from "../components/contact";
 import { getSortedProjectsData } from "../lib/projects";
+import homeStyles from "../styles/Home.module.css";
 
 export function getStaticProps() {
   const allProjectsData = getSortedProjectsData();
@@ -43,9 +45,7 @@ export default function Home({ allProjectsData }) {
 
       {/* Project Section */}
       <div>
-        <h1 className="text-6xl mt-8 font-bold tracking-tight text-gray-900 text-center">
-          Projects
-        </h1>
+        <h1 className={homeStyles.headerMargin}>Projects</h1>
         <div className="grid grid-rows-8 gap-16 mt-4 md:gap-24 md:mt-16 justify-center">
           {allProjectsData.map(
             ({ title, description, startTime, endTime, github }) => (
@@ -65,6 +65,8 @@ export default function Home({ allProjectsData }) {
         </div>
       </div>
       {/* Contact form*/}
+      <h1 className={homeStyles.headerMargin}>Contact me</h1>
+      <Contact />
     </>
   );
 }
