@@ -5,7 +5,11 @@ const navigation = [
   { name: "Home", href: "#Home", current: true },
   { name: "About", href: "#About", current: false },
   { name: "Projects", href: "#Projects", current: false },
-  { name: "Resume", href: "#Resume", current: false },
+  {
+    name: "Resume",
+    href: "#Resume",
+    current: false,
+  },
 ];
 
 function classNames(...classes) {
@@ -24,12 +28,31 @@ function buttonState(item) {
     ? "bg-gray-900 text-white"
     : "text-black hover:bg-gray-900 hover:text-white";
 }
+
+function downloadResume() {
+  // using Java Script method to get PDF file
+  const resumeName = "matthew-deguzman-resume.pdf";
+  fetch(resumeName).then((response) => {
+    response.blob().then((blob) => {
+      // Creating new object of PDF file
+      const fileURL = window.URL.createObjectURL(blob);
+      // Setting various property values
+      let alink = document.createElement("a");
+      alink.href = fileURL;
+      alink.download = resumeName;
+      alink.click();
+    });
+  });
+}
 function button(item) {
   return (
     <button
       key={item.name}
       onClick={() => {
         scrollClick(item.name);
+        if (item.name === "Resume") {
+          downloadResume();
+        }
       }}
       className={classNames(
         buttonState(item),
@@ -88,6 +111,7 @@ export default function Navbar() {
                   )}
                   aria-current={item.current ? "page" : undefined}
                   href={item.href}
+                  onClick={item.name === "Resume" ? downloadResume : ""}
                 >
                   {item.name}
                 </Disclosure.Button>
