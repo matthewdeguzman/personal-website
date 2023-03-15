@@ -20,11 +20,8 @@ export default function Home({ allProjectsData }) {
   return (
     <>
       <Head>
-        <title>Matthew's Portfolio</title>
-        <meta
-          name="description"
-          content="Matthew DeGuzman's personal website"
-        />
+        <title>Matthew DeGuzman Portfolio</title>
+        <meta name="description" content="Matthew DeGuzman portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
