@@ -26,7 +26,7 @@ function getTitle(title, left) {
   return (
     <h2
       className={
-        "text-4xl font-bold tracking-tight text-gray-900 text-center " +
+        "text-xl md:text-3xl font-bold tracking-tight text-gray-900 text-center " +
         alignment
       }
     >
@@ -38,7 +38,9 @@ function gitDescription(description, github, left) {
   const alignment = left ? "md:text-left md:pl-4" : "md:text-right md:pr-4";
   return (
     <div className={"text-center " + alignment}>
-      <p className="mt-4 text-lg text-gray-700 md:mt-0">{description}</p>
+      <p className="mt-4 text-sm md:text-lg max-w-sm md:max-w-md text-gray-700 md:mt-0">
+        {description}
+      </p>
       <Link
         href={github}
         target="_blank"

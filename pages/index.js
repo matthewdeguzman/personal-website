@@ -29,7 +29,7 @@ export default function Home({ allProjectsData }) {
       <Navbar />
       {/* Introduction Section */}
       <div className="mt-8 sm:mt-16 scroll-mt-12" id="Home">
-        <p className="text-5xl pl-2 md:text-7xl font-sans font-extrabold tracking-tight text-gray-900">
+        <p className="text-4xl sm:text-5xl pl-2 md:text-7xl font-sans font-extrabold tracking-tight text-gray-900">
           Hello. <br />
           My name is Matthew DeGuzman.
         </p>
@@ -37,11 +37,11 @@ export default function Home({ allProjectsData }) {
 
       {/* About me section */}
       <div className="bg-black w-screen sm:scroll-mt-12" id="About">
-        <p className="mx-auto text-center text-gray-100 text-lg py-8 mt-2 w-fit sm:mt-4 sm:max-w-screen-sm">
-          I am a software developer and currently attend the University of
+        <p className="mx-auto text-center text-gray-100 max-w-lg text-sm md:text-lg py-8 px-4 mt-2 w-fit sm:mt-4">
+          I am a software developer currently attending the University of
           Florida where I am pursuing a BS in Computer Science and minoring in
-          Mathematics. I have industry experience through two internships at
-          Microsoft and continue to learn new technologies outside of school.
+          Mathematics. I have interned at Microsoft and continue to learn new
+          technologies outside of school.
         </p>
       </div>
 
