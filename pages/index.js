@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import Project from "../components/project";
 import Footer from "../components/footer";
 import About from "../components/about";
+import Link from "next/link";
 import { getSortedProjectsData } from "../lib/projects";
 import homeStyles from "../styles/Home.module.css";
 
@@ -28,6 +29,7 @@ export default function Home({ allProjectsData }) {
       </Head>
 
       <Navbar />
+
       {/* Introduction Section */}
       <div className="mt-8 sm:mt-16 scroll-mt-12" id="Home">
         <p className="text-4xl sm:text-5xl pl-2 md:text-7xl font-sans font-extrabold tracking-tight text-gray-900">
@@ -37,13 +39,20 @@ export default function Home({ allProjectsData }) {
       </div>
 
       {/* About me section */}
-      <div className="bg-black w-screen sm:scroll-mt-12" id="About">
+      <div
+        className="bg-black w-screen mt-2 md:mt-4 sm:scroll-mt-12"
+        id="About"
+      >
         <About />
       </div>
 
       {/* Project Section */}
       <div className="scroll-mt-16 sm:scroll-mt-24" id="Projects">
-        <h1 className={homeStyles.headerMargin}>Projects</h1>
+        <h1 className={homeStyles.headerMargin}>
+          <Link href="https://github.com/matthewdeguzman" target="_blank">
+            Projects
+          </Link>
+        </h1>
         <div className="grid grid-rows-8 gap-16 mt-4 md:gap-24 md:mt-16 justify-center">
           {allProjectsData.map(
             ({ title, description, startTime, endTime, github }) => (

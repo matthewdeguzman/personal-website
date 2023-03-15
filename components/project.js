@@ -8,7 +8,7 @@ export default function Project({
   github,
   left,
 }) {
-  const titl = getTitle(title, left);
+  const titl = getTitle(title, github, left);
   const desc = gitDescription(description, github, left);
   const order = left ? "" : "md:-order-1"; // order of the description in the grid depends on if the title is on left
   return (
@@ -21,7 +21,7 @@ export default function Project({
   );
 }
 
-function getTitle(title, left) {
+function getTitle(title, github, left) {
   const alignment = left ? "md:text-right md:pr-4" : "md:text-left md:pl-4";
   return (
     <h2
@@ -30,7 +30,9 @@ function getTitle(title, left) {
         alignment
       }
     >
-      {title}
+      <Link href={github} target="_blank">
+        {title}
+      </Link>
     </h2>
   );
 }
