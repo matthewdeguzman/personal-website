@@ -2,14 +2,14 @@
   "projects": [
     {
       "title": "Technical Research Project",
-      "description": "Worked with Dr. Amanpreet Kapoor at the University of Florida (UF) to create open education resources that will be added to the Data Structures and Algorithms course at UF and distributed globally. I created technical interview questions and produced detailed studio recordings to outline my solutions and relay my thought process",
+      "description": "Worked with Dr. Amanpreet Kapoor at the University of Florida (UF) to create open education resources that will be added to the Data Structures and Algorithms course at UF and distributed globally. I created technical interview questions and produced detailed studio recordings to outline my solutions and relay my thought process.",
       "startTime": "January 2023",
       "endTime": "May 2023",
       "github": "https://github.com/COP3530/Programming-Problems"
     },
     {
       "title": "Content Generator",
-      "description": "Created a program that automates the video generation process and produces entertaining videos ready to be uploaded to social media platforms",
+      "description": "Created a program that automates the video generation process and produces entertaining videos ready to be uploaded to social media platforms. Contact for github access necessary.",
       "startTime": "September 2022",
       "endTime": "February 2023",
       "github": "https://github.com/matthewdeguzman/tiktok-content-generator"
@@ -23,14 +23,14 @@
     },
     {
       "title": "Tic-Tac-Toe AI",
-      "description": "Created an unbeatable tic-tac-toe bot by implementing the minimax algorithm",
+      "description": "Created an unbeatable tic-tac-toe bot by implementing the minimax algorithm.",
       "startTime": "December 2021",
       "endTime": "January 2022",
       "github": "https://github.com/matthewdeguzman/Tic-Tac-Toe-AI"
     },
     {
       "title": "Minesweeper",
-      "description": "Worked with the SFML library and C++ to make a working version of minesweeper",
+      "description": "Worked with the SFML library and C++ to make a working version of minesweeper.",
       "startTime": "November 2021",
       "endTime": "December 2021",
       "github": "https://github.com/matthewdeguzman/Minesweeper"
@@ -44,14 +44,14 @@
     },
     {
       "title": "Car Salesperson Simulator",
-      "description": "Worked with Java Swing to create an interactive UI for users to buy cars",
+      "description": "Worked with Java Swing to create an interactive UI for users to buy cars.",
       "startTime": "March 2021",
       "endTime": "April 2021",
       "github": "https://github.com/matthewdeguzman/Car-Salesperson"
     },
     {
       "title": "Java Mastermind",
-      "description": "Recreated the Mastermind boardgame in Java",
+      "description": "Recreated the Mastermind boardgame in Java.",
       "startTime": "November 2020",
       "endTime": "December 2020",
       "github": "https://github.com/matthewdeguzman/Mastermind"
