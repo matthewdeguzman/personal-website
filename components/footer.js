@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-export default function Contact() {
+export default function Contact({ gap }) {
   return (
-    <div className="flex gap-4 py-3 mt-16 justify-center w-screen bg-black items-stretch">
+    <div
+      className={
+        "flex py-3 justify-center w-screen bg-black items-stretch " + gap
+      }
+    >
       <Link
         href="https://github.com/matthewdeguzman"
         target="_blank"

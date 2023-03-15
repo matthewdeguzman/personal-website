@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "../components/navbar";
 import Project from "../components/project";
 import Footer from "../components/footer";
+import About from "../components/about";
 import { getSortedProjectsData } from "../lib/projects";
 import homeStyles from "../styles/Home.module.css";
 
@@ -37,12 +38,7 @@ export default function Home({ allProjectsData }) {
 
       {/* About me section */}
       <div className="bg-black w-screen sm:scroll-mt-12" id="About">
-        <p className="mx-auto text-center text-gray-100 max-w-lg text-sm md:text-lg py-8 px-4 mt-2 w-fit sm:mt-4">
-          I am a software developer currently attending the University of
-          Florida where I am pursuing a BS in Computer Science and minoring in
-          Mathematics. I have interned at Microsoft and continue to learn new
-          technologies outside of school.
-        </p>
+        <About />
       </div>
 
       {/* Project Section */}
@@ -67,7 +63,9 @@ export default function Home({ allProjectsData }) {
         </div>
       </div>
 
-      <Footer />
+      <div className="mt-16">
+        <Footer gap="gap-x-4" />
+      </div>
     </>
   );
 }
