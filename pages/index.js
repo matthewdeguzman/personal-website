@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import Project from "../components/project";
-import Contact from "../components/contact";
+import Footer from "../components/footer";
 import { getSortedProjectsData } from "../lib/projects";
 import homeStyles from "../styles/Home.module.css";
 
@@ -66,11 +66,8 @@ export default function Home({ allProjectsData }) {
           )}
         </div>
       </div>
-      {/* Contact form*/}
-      <div className="scroll-mt-4 sm:scroll-mt-12" id="Contact">
-        <h1 className={homeStyles.headerMargin}>Contact me</h1>
-      </div>
-      <Contact />
+
+      <Footer />
     </>
   );
 }
